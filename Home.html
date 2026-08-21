@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive portfolio website based on the provided Figma home page design.">
+    <title>My Portfolio | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="container header-inner">
+        <a class="logo" href="Home.html">MY LOGO</a>
+        <div class="contact-strip">
+          <a href="tel:+959855544246"><i class="bi bi-telephone-fill"></i> +959 855 544 246</a>
+          <a href="mailto:myportfolio@gmail.com"><i class="bi bi-envelope-fill"></i> myportfolio@gmail.com</a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="#" aria-label="Viber"><i class="bi bi-telephone-inbound-fill"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav nav-menu">
+            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="project-detail.html">About Me</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">My Projects</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#projects">E-commerce App</a></li>
+                <li><a class="dropdown-item" href="#projects">Hotel Booking App</a></li>
+                <li><a class="dropdown-item" href="#projects">WordPress Projects</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#events">Events & Activities</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-shade"></div>
+        <div class="container hero-content text-center">
+          <h1>Architecting Scalable Web <br>Systems &amp; Clean Code</h1>
+          <p>Senior Full-Stack Engineer specializing in high-performance cloud architectures, modern TypeScript, and resilient API design.</p>
+          <a class="btn gradient-btn" href="#projects">Explore Projects <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+        <div class="hero-count"><span>01</span><i></i><span>03</span></div>
+      </section>
+
+      <section class="projects-section" id="projects">
+        <div class="path-line path-left"></div>
+        <div class="path-line path-right"></div>
+        <div class="container">
+          <div class="section-copy">
+            <p class="eyebrow">MY PROJECTS</p>
+            <h2>Full-stack builds, and digital<br>platforms.</h2>
+          </div>
+
+          <div class="projects-stage">
+            <button class="circle-btn soft" type="button" aria-label="Previous projects"><i class="bi bi-arrow-left"></i></button>
+            <div class="project-rail">
+              <article class="project-tile tall">
+                <img src="assets/images/project-ecommerce.png" alt="E-commerce app preview">
+                <div class="tile-overlay">
+                  <h3>E-commerce App</h3>
+                  <a href="project-detail.html" aria-label="View e-commerce app details"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </article>
+              <article class="project-tile lower">
+                <img src="assets/images/project-hotel.png" alt="Hotel booking app preview">
+                <div class="tile-overlay">
+                  <h3>Hotel Booking App</h3>
+                  <a href="project-detail.html" aria-label="View hotel booking app details"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </article>
+              <article class="project-tile tall">
+                <img src="assets/images/project-car.png" alt="Car website preview">
+                <div class="tile-overlay">
+                  <h3>Car Website</h3>
+                  <a href="project-detail.html" aria-label="View car website details"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </article>
+              <article class="project-tile lower">
+                <img src="assets/images/project-wordpress.png" alt="WordPress projects preview">
+                <div class="tile-overlay">
+                  <h3>WordPress Projects</h3>
+                  <a href="project-detail.html" aria-label="View WordPress project details"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </article>
+            </div>
+            <button class="circle-btn active" type="button" aria-label="Next projects"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills-section" id="skills">
+        <div class="skills-photo">
+          <div class="skills-shade"></div>
+          <div class="skills-intro">
+            <p>MY SKILLS</p>
+            <h2>Technologies, frameworks, <br>and developer tools I build with.</h2>
+          </div>
+          <div class="skill-feature">
+            <h3>WordPress</h3>
+            <p>Custom theme development, plugin integration, and optimized WordPress builds tailored for speed, security, and easy content management.</p>
+            <a class="btn gradient-btn" href="project-detail.html">View Detail <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="skills-carousel">
+          <div class="skill-arrows">
+            <button class="circle-btn soft" type="button" aria-label="Previous skill"><i class="bi bi-arrow-left"></i></button>
+            <button class="circle-btn active" type="button" aria-label="Next skill"><i class="bi bi-arrow-right"></i></button>
+          </div>
+          <div class="skill-cards">
+            <article class="skill-card teal">
+              <i class="bi bi-wordpress"></i>
+              <h3>WordPress</h3>
+            </article>
+            <article class="skill-card violet">
+              <span>php</span>
+              <h3>PHP</h3>
+            </article>
+            <article class="skill-card blue">
+              <i class="bi bi-filetype-py"></i>
+              <h3>Python</h3>
+            </article>
+            <article class="skill-card yellow">
+              <i class="bi bi-filetype-js"></i>
+              <h3>JavaScript</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="events-section" id="events">
+        <div class="container">
+          <div class="events-heading text-center">
+            <p class="eyebrow">EVENTS &amp; ACTIVITIES</p>
+            <h2>Workshops, community meetups, <br>and technical highlights.</h2>
+          </div>
+
+          <div class="events-grid">
+            <article class="event-feature">
+              <img src="assets/images/event-main.png" alt="Developer meetup auditorium">
+              <div class="event-dark-overlay"></div>
+              <div class="event-caption">
+                <p><i class="bi bi-calendar3"></i> 9 May 2026</p>
+                <h3>MICT Park Developer Meetups &amp;<br>Workshops</h3>
+              </div>
+              <a class="round-link" href="project-detail.html" aria-label="View event details"><i class="bi bi-arrow-up-right"></i></a>
+            </article>
+
+            <div class="event-list">
+              <article class="event-row">
+                <img src="assets/images/event-tech.png" alt="Community tech sharing venue">
+                <div class="event-row-copy">
+                  <p><i class="bi bi-calendar3"></i> 12 May 2026</p>
+                  <h3>Community Tech Sharing<br>&amp; BarCamp Yangon</h3>
+                  <a class="round-link" href="project-detail.html" aria-label="View community tech sharing details"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </article>
+              <article class="event-row">
+                <img src="assets/images/event-launch.png" alt="Startup platform launch meeting">
+                <div class="event-row-copy">
+                  <p><i class="bi bi-calendar3"></i> 23 April 2026</p>
+                  <h3>Local Startup &amp; Client<br>Platform Launches</h3>
+                  <a class="round-link" href="project-detail.html" aria-label="View startup launch details"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-panel">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <h2>CONTACT INFO</h2>
+            <dl class="contact-list">
+              <div><dt>Address:</dt><dd>No.67, Pinlon Road, 38th Ward, North<br>Dagon, Yangon, Myanmar</dd></div>
+              <div><dt>Phone:</dt><dd>+959 855 544 246</dd></div>
+              <div><dt>Email:</dt><dd>myportfolio@gmail.com</dd></div>
+            </dl>
+          </div>
+          <div class="col-lg-4">
+            <h2>LANGUAGE FLUENCY</h2>
+            <ul class="language-list">
+              <li><i class="bi bi-arrow-up-right"></i> English (Intermediate)</li>
+              <li><i class="bi bi-arrow-up-right"></i> Myanmar(Native)</li>
+              <li><i class="bi bi-arrow-up-right"></i> Chinese(Intermediate)</li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h2>MY SOCIALS</h2>
+            <div class="footer-socials">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+              <a href="#" aria-label="Viber"><i class="bi bi-telephone-inbound-fill"></i></a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">&copy; 2026 My Portfolio. All right reserved.</p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" type="button" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
