@@ -1449,7 +1449,6 @@ img {
   }
 }
 
-/* Desktop compositions from the supplied project and skills references. */
 @media (min-width: 992px) {
   .projects-section {
     background:
@@ -3413,7 +3412,6 @@ img {
   }
 }
 
-/* Refined project detail pages */
 .detail-v2 {
   --detail-blue: #55b0fb;
   --detail-violet: #7561f6;
