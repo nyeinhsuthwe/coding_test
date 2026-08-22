@@ -4,7 +4,7 @@ A responsive portfolio website built for the junior frontend developer coding te
 
 ## Submission
 
-- Live Website URL: Add the deployed website URL here.
+- Live Website URL: [coding-test-portfolio.vercel.app](https://coding-test-portfolio.vercel.app/)
 
 ## Pages
 
