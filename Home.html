@@ -60,6 +60,15 @@
       <section class="projects-section" id="projects">
         <div class="path-line path-left"></div>
         <div class="path-line path-right"></div>
+        <svg class="project-route" viewBox="0 0 1920 900" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <marker id="project-route-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 1 1 L 8 5 L 1 9" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+            </marker>
+          </defs>
+          <path class="project-route-line" d="M -45 455 C 155 310, 330 265, 505 430 S 700 335, 925 465 S 1145 245, 1330 400"></path>
+          <path class="project-route-line" d="M 1570 665 C 1725 635, 1815 550, 1795 390 C 1775 230, 1745 82, 1840 56" marker-end="url(#project-route-arrow)"></path>
+        </svg>
         <div class="container">
           <div class="section-copy">
             <p class="eyebrow">MY PROJECTS</p>
@@ -67,8 +76,8 @@
           </div>
 
           <div class="projects-stage">
-            <button class="circle-btn soft" type="button" aria-label="Previous projects"><i class="bi bi-arrow-left"></i></button>
-            <div class="project-rail">
+            <button class="circle-btn soft project-carousel-btn" type="button" data-project-direction="previous" aria-label="Previous project"><i class="bi bi-arrow-left"></i></button>
+            <div class="project-rail" aria-label="Featured projects">
               <article class="project-tile tall">
                 <img src="assets/images/project-ecommerce.png" alt="E-commerce app preview">
                 <div class="tile-overlay">
@@ -98,7 +107,7 @@
                 </div>
               </article>
             </div>
-            <button class="circle-btn active" type="button" aria-label="Next projects"><i class="bi bi-arrow-right"></i></button>
+            <button class="circle-btn soft project-carousel-btn" type="button" data-project-direction="next" aria-label="Next project"><i class="bi bi-arrow-right"></i></button>
           </div>
         </div>
       </section>
@@ -118,10 +127,10 @@
         </div>
         <div class="skills-carousel">
           <div class="skill-arrows">
-            <button class="circle-btn soft" type="button" aria-label="Previous skill"><i class="bi bi-arrow-left"></i></button>
-            <button class="circle-btn active" type="button" aria-label="Next skill"><i class="bi bi-arrow-right"></i></button>
+            <button class="circle-btn soft skill-carousel-btn" type="button" data-skill-direction="previous" aria-label="Previous skill"><i class="bi bi-arrow-left"></i></button>
+            <button class="circle-btn soft skill-carousel-btn" type="button" data-skill-direction="next" aria-label="Next skill"><i class="bi bi-arrow-right"></i></button>
           </div>
-          <div class="skill-cards">
+          <div class="skill-cards" aria-label="Technical skills">
             <article class="skill-card teal">
               <i class="bi bi-wordpress"></i>
               <h3>WordPress</h3>

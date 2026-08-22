@@ -287,6 +287,19 @@ img {
   transform: rotate(7deg);
 }
 
+.project-route {
+  display: none;
+}
+
+.project-route-line {
+  fill: none;
+  stroke: rgba(44, 44, 44, 0.24);
+  stroke-width: 2.5;
+  stroke-dasharray: 12 14;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
 .projects-stage {
   gap: clamp(18px, 3vw, 34px);
   margin-top: clamp(34px, 5vw, 58px);
@@ -309,6 +322,56 @@ img {
   border-radius: 18px;
   background: #ddd;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+}
+
+:is(.project-carousel-btn, .skill-carousel-btn) {
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    background 180ms ease,
+    filter 180ms ease;
+}
+
+:is(.project-carousel-btn, .skill-carousel-btn):disabled {
+  cursor: default;
+}
+
+:is(.project-carousel-btn, .skill-carousel-btn).soft:hover:not(:disabled) {
+  color: var(--white);
+  background: linear-gradient(135deg, #53b2fb 0%, #755ff6 100%);
+  box-shadow: 0 10px 22px rgba(92, 105, 245, 0.28);
+  transform: translateY(-3px);
+}
+
+:is(.project-carousel-btn, .skill-carousel-btn).soft.is-clicked {
+  color: var(--white);
+  background: linear-gradient(135deg, #53b2fb 0%, #755ff6 100%);
+}
+
+:is(.project-carousel-btn, .skill-carousel-btn).active:hover:not(:disabled) {
+  filter: brightness(1.08) saturate(1.12);
+  box-shadow: 0 10px 22px rgba(92, 105, 245, 0.34);
+  transform: translateY(-3px);
+}
+
+:is(.project-carousel-btn, .skill-carousel-btn):focus-visible {
+  outline: 3px solid rgba(83, 178, 251, 0.45);
+  outline-offset: 4px;
+}
+
+:is(.project-carousel-btn, .skill-carousel-btn):active:not(:disabled),
+:is(.project-carousel-btn, .skill-carousel-btn).is-clicked {
+  transform: translateY(1px) scale(0.94);
+  box-shadow: 0 4px 10px rgba(74, 75, 143, 0.2);
+  filter: brightness(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.project-carousel-btn, .skill-carousel-btn) {
+    transition: none;
+  }
 }
 
 .project-tile.lower {
@@ -616,6 +679,7 @@ img {
 
 .event-row img {
   border-radius: 18px;
+  height: 220px;
 }
 
 .event-row-copy {
@@ -1267,5 +1331,171 @@ img {
 
   .case-visual {
     min-height: 220px;
+  }
+}
+
+/* Desktop compositions from the supplied project and skills references. */
+@media (min-width: 992px) {
+  .projects-section {
+    background:
+      linear-gradient(
+          180deg,
+          #e8e8e8 0%,
+          #eeeeee 52%,
+          var(--light-bg) 100%
+        )
+        right / 48.2% 100% no-repeat,
+      var(--light-bg);
+  }
+
+  .projects-section .section-copy {
+    max-width: 540px;
+    margin-left: clamp(76px, 7vw, 90px);
+  }
+
+  .projects-section .section-copy .eyebrow {
+    margin-bottom: 12px;
+    font-size: clamp(1rem, 1.1vw, 1.3rem);
+  }
+
+  .projects-section .section-copy h2 {
+    font-size: clamp(2rem, 2.25vw, 2.65rem);
+    line-height: 1.2;
+  }
+
+  .projects-section > .path-line {
+    display: none;
+  }
+
+  .project-route {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+    pointer-events: none;
+    color: rgba(44, 44, 44, 0.3);
+  }
+
+  .projects-section > .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .skills-section {
+    --skill-carousel-top: 29%;
+    --skill-carousel-left: 43.7vw;
+    --skill-control-size: clamp(48px, 3vw, 64px);
+    --skill-control-gap: clamp(32px, 3vw, 66px);
+    --skill-card-size: clamp(204px, 16.2vw, 352px);
+    --skill-card-radius: clamp(16px, 1vw, 22px);
+    --skill-card-indent: clamp(22px, 1.4vw, 31px);
+    --skill-shade-padding: clamp(24px, 1.5vw, 32px);
+    --skill-shade-radius: calc(
+      var(--skill-card-radius) + var(--skill-shade-padding)
+    );
+    min-height: clamp(650px, 49vw, 1068px);
+    padding: 0;
+    isolation: isolate;
+  }
+
+  .skills-section::after {
+    display: block;
+    left: calc(
+      var(--skill-carousel-left) + var(--skill-card-indent) -
+        var(--skill-shade-padding)
+    );
+    right: 0;
+    top: calc(
+      var(--skill-carousel-top) + var(--skill-control-size) +
+        var(--skill-control-gap) - var(--skill-shade-padding)
+    );
+    width: auto;
+    height: calc(
+      var(--skill-card-size) + var(--skill-shade-padding) +
+        var(--skill-shade-padding)
+    );
+    border-radius: var(--skill-shade-radius) 0 0 var(--skill-shade-radius);
+  }
+
+  .skills-photo {
+    top: clamp(28px, 2.7vw, 59px);
+    z-index: 0;
+    width: min(54.2vw, 1180px);
+    min-height: clamp(600px, 44.7vw, 974px);
+    border-radius: 0 clamp(48px, 3.8vw, 82px) clamp(48px, 3.8vw, 82px) 0;
+    background-position: center;
+  }
+
+  .skills-intro,
+  .skill-feature {
+    margin-left: clamp(48px, 12vw, 260px);
+  }
+
+  .skills-intro {
+    width: min(38vw, 650px);
+    padding-top: clamp(52px, 3vw, 66px);
+  }
+
+  .skills-intro h2 {
+    font-size: clamp(1.8rem, 2.15vw, 2.9rem);
+  }
+
+  .skill-feature {
+    width: min(29vw, 620px);
+    max-width: 620px;
+    margin-top: clamp(112px, 11.5vw, 250px);
+  }
+
+  .skills-carousel {
+    position: absolute;
+    top: var(--skill-carousel-top);
+    left: var(--skill-carousel-left);
+    width: 56.3vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .skill-arrows {
+    justify-content: flex-end;
+    gap: clamp(10px, 0.65vw, 14px);
+    margin-bottom: var(--skill-control-gap);
+    padding-right: clamp(80px, 16vw, 350px);
+  }
+
+  .skill-arrows .circle-btn {
+    width: var(--skill-control-size);
+    height: var(--skill-control-size);
+    flex-basis: var(--skill-control-size);
+  }
+
+  .skill-cards {
+    gap: clamp(18px, 1.35vw, 30px);
+    margin-left: var(--skill-card-indent);
+    padding-bottom: 12px;
+    overflow: visible;
+  }
+
+  .skill-card {
+    flex: 0 0 var(--skill-card-size);
+    width: var(--skill-card-size);
+    border-radius: var(--skill-card-radius);
+  }
+
+  .skill-card i {
+    font-size: clamp(4.5rem, 6.3vw, 8.6rem);
+  }
+
+  .skill-card span {
+    font-size: clamp(4.2rem, 6vw, 8.15rem);
+  }
+
+  .skill-card h3 {
+    margin-top: clamp(18px, 2vw, 36px);
+    font-size: clamp(1rem, 1.15vw, 1.55rem);
   }
 }
